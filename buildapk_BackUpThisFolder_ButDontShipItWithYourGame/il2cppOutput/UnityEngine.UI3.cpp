@@ -5226,16 +5226,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PanelEventHandler_ProcessKeyboardEvent_m
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PanelEventHandler_ProcessTabEvent_m53F9BFFBF8D1E45FE3CD57EC3815C7130C1363AE (PanelEventHandler_t7DF19E1B93AD4FE82833AD0801732CB7DD8CAA09* __this, Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB* ___e0, const RuntimeMethod* method) ;
 // System.Boolean UnityEngine.Event::PopEvent(UnityEngine.Event)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Event_PopEvent_mC780BAA7CE4F0E75C8B5C7DC5EB430C278B0D0AE (Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB* ___outEvent0, const RuntimeMethod* method) ;
+// System.Void UnityEngine.UIElements.PanelEventHandler::SendKeyUpEvent(UnityEngine.Event)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PanelEventHandler_SendKeyUpEvent_mF261A0CE2897E82529220A72DBE069DE97EC601D (PanelEventHandler_t7DF19E1B93AD4FE82833AD0801732CB7DD8CAA09* __this, Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB* ___e0, const RuntimeMethod* method) ;
+// System.Void UnityEngine.UIElements.PanelEventHandler::SendKeyDownEvent(UnityEngine.Event)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PanelEventHandler_SendKeyDownEvent_mB5DA98F3B07ED56ABF2E694744BE6EAE3ED81452 (PanelEventHandler_t7DF19E1B93AD4FE82833AD0801732CB7DD8CAA09* __this, Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB* ___e0, const RuntimeMethod* method) ;
 // System.Char UnityEngine.Event::get_character()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Il2CppChar Event_get_character_m8F7A92E90EF65B9379C01432B42D6BF818C32A61 (Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB* __this, const RuntimeMethod* method) ;
-// UnityEngine.KeyCode UnityEngine.Event::get_keyCode()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Event_get_keyCode_mADBB236A741F96D86E4A536E15FFECFD4C367B64 (Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB* __this, const RuntimeMethod* method) ;
-// System.Void UnityEngine.UIElements.PanelEventHandler::SendKeyUpEvent(UnityEngine.Event,UnityEngine.KeyCode,UnityEngine.EventModifiers)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PanelEventHandler_SendKeyUpEvent_mC3F8DADF58FA97F38C3FB9D875EEA214653266B8 (PanelEventHandler_t7DF19E1B93AD4FE82833AD0801732CB7DD8CAA09* __this, Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB* ___e0, int32_t ___keyCode1, int32_t ___modifiers2, const RuntimeMethod* method) ;
-// System.Void UnityEngine.UIElements.PanelEventHandler::SendKeyDownEvent(UnityEngine.Event,UnityEngine.KeyCode,UnityEngine.EventModifiers)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PanelEventHandler_SendKeyDownEvent_mE7D9589061BA12A865F047C7CF81438780048244 (PanelEventHandler_t7DF19E1B93AD4FE82833AD0801732CB7DD8CAA09* __this, Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB* ___e0, int32_t ___keyCode1, int32_t ___modifiers2, const RuntimeMethod* method) ;
-// System.Void UnityEngine.UIElements.PanelEventHandler::SendTextEvent(UnityEngine.Event,System.Char,UnityEngine.EventModifiers)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PanelEventHandler_SendTextEvent_m7F5BBE8DEC07BA49E1BB117B4B52ED330B38AEAE (PanelEventHandler_t7DF19E1B93AD4FE82833AD0801732CB7DD8CAA09* __this, Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB* ___e0, Il2CppChar ___c1, int32_t ___modifiers2, const RuntimeMethod* method) ;
 // System.Boolean UnityEngine.Event::get_shift()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Event_get_shift_mB8409DA839B09DC6137848E131A6DBE70BB9E70A (Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB* __this, const RuntimeMethod* method) ;
 // System.Void UnityEngine.UIElements.PanelEventHandler::SendTabEvent(UnityEngine.Event,System.Int32)
@@ -5244,6 +5240,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PanelEventHandler_SendTabEvent_mA2058FFF
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NavigationTabEvent_t8FEFFA10A773425C471E7B88B3498C64A8247DF7* NavigationTabEvent_GetPooled_m005DBE10756CB17653B72DA4904AD8F6EEB2E41C (int32_t ___moveValue0, const RuntimeMethod* method) ;
 // System.Void UnityEngine.UIElements.PanelEventHandler::SendEvent(UnityEngine.UIElements.EventBase,UnityEngine.Event)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PanelEventHandler_SendEvent_m8A731185591EB81DC398B72D4C081970A89D421B (PanelEventHandler_t7DF19E1B93AD4FE82833AD0801732CB7DD8CAA09* __this, EventBase_tD7F89B936EB8074AE31E7B15976C072277371F7C* ___e0, Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB* ___sourceEvent1, const RuntimeMethod* method) ;
+// UnityEngine.KeyCode UnityEngine.Event::get_keyCode()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Event_get_keyCode_mADBB236A741F96D86E4A536E15FFECFD4C367B64 (Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB* __this, const RuntimeMethod* method) ;
 // T UnityEngine.UIElements.KeyboardEventBase`1<UnityEngine.UIElements.KeyUpEvent>::GetPooled(System.Char,UnityEngine.KeyCode,UnityEngine.EventModifiers)
 inline KeyUpEvent_tA037C42AEA6A8E0919BA60BD796B3AD1DA506394* KeyboardEventBase_1_GetPooled_m166C0D48F33269027DFAA03D506DE97CAB8560A6 (Il2CppChar ___c0, int32_t ___keyCode1, int32_t ___modifiers2, const RuntimeMethod* method)
 {
@@ -9368,89 +9366,35 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PanelEventHandler_ProcessKeyboardEvent_m
 		L_1 = Event_get_type_m8A825D6DA432B967DAA3E22E5C8571620A75F8A8(L_0, NULL);
 		if ((!(((uint32_t)L_1) == ((uint32_t)5))))
 		{
-			goto IL_0025;
+			goto IL_0011;
 		}
 	}
 	{
-		// if (e.character == '\0')
+		// SendKeyUpEvent(e);
 		Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB* L_2 = ___e0;
-		NullCheck(L_2);
-		Il2CppChar L_3;
-		L_3 = Event_get_character_m8F7A92E90EF65B9379C01432B42D6BF818C32A61(L_2, NULL);
-		if (L_3)
-		{
-			goto IL_005d;
-		}
-	}
-	{
-		// SendKeyUpEvent(e, e.keyCode, e.modifiers);
-		Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB* L_4 = ___e0;
-		Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB* L_5 = ___e0;
-		NullCheck(L_5);
-		int32_t L_6;
-		L_6 = Event_get_keyCode_mADBB236A741F96D86E4A536E15FFECFD4C367B64(L_5, NULL);
-		Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB* L_7 = ___e0;
-		NullCheck(L_7);
-		int32_t L_8;
-		L_8 = Event_get_modifiers_mD55E7CF06EB720434F0F174EA569B2A29792D39B(L_7, NULL);
-		PanelEventHandler_SendKeyUpEvent_mC3F8DADF58FA97F38C3FB9D875EEA214653266B8(__this, L_4, L_6, L_8, NULL);
+		PanelEventHandler_SendKeyUpEvent_mF261A0CE2897E82529220A72DBE069DE97EC601D(__this, L_2, NULL);
 		return;
 	}
 
-IL_0025:
+IL_0011:
 	{
 		// else if (e.type == EventType.KeyDown)
-		Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB* L_9 = ___e0;
-		NullCheck(L_9);
-		int32_t L_10;
-		L_10 = Event_get_type_m8A825D6DA432B967DAA3E22E5C8571620A75F8A8(L_9, NULL);
-		if ((!(((uint32_t)L_10) == ((uint32_t)4))))
+		Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB* L_3 = ___e0;
+		NullCheck(L_3);
+		int32_t L_4;
+		L_4 = Event_get_type_m8A825D6DA432B967DAA3E22E5C8571620A75F8A8(L_3, NULL);
+		if ((!(((uint32_t)L_4) == ((uint32_t)4))))
 		{
-			goto IL_005d;
+			goto IL_0021;
 		}
 	}
 	{
-		// if (e.character == '\0')
-		Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB* L_11 = ___e0;
-		NullCheck(L_11);
-		Il2CppChar L_12;
-		L_12 = Event_get_character_m8F7A92E90EF65B9379C01432B42D6BF818C32A61(L_11, NULL);
-		if (L_12)
-		{
-			goto IL_004a;
-		}
-	}
-	{
-		// SendKeyDownEvent(e, e.keyCode, e.modifiers);
-		Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB* L_13 = ___e0;
-		Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB* L_14 = ___e0;
-		NullCheck(L_14);
-		int32_t L_15;
-		L_15 = Event_get_keyCode_mADBB236A741F96D86E4A536E15FFECFD4C367B64(L_14, NULL);
-		Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB* L_16 = ___e0;
-		NullCheck(L_16);
-		int32_t L_17;
-		L_17 = Event_get_modifiers_mD55E7CF06EB720434F0F174EA569B2A29792D39B(L_16, NULL);
-		PanelEventHandler_SendKeyDownEvent_mE7D9589061BA12A865F047C7CF81438780048244(__this, L_13, L_15, L_17, NULL);
-		return;
+		// SendKeyDownEvent(e);
+		Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB* L_5 = ___e0;
+		PanelEventHandler_SendKeyDownEvent_mB5DA98F3B07ED56ABF2E694744BE6EAE3ED81452(__this, L_5, NULL);
 	}
 
-IL_004a:
-	{
-		// SendTextEvent(e, e.character, e.modifiers);
-		Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB* L_18 = ___e0;
-		Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB* L_19 = ___e0;
-		NullCheck(L_19);
-		Il2CppChar L_20;
-		L_20 = Event_get_character_m8F7A92E90EF65B9379C01432B42D6BF818C32A61(L_19, NULL);
-		Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB* L_21 = ___e0;
-		NullCheck(L_21);
-		int32_t L_22;
-		L_22 = Event_get_modifiers_mD55E7CF06EB720434F0F174EA569B2A29792D39B(L_21, NULL);
-		PanelEventHandler_SendTextEvent_m7F5BBE8DEC07BA49E1BB117B4B52ED330B38AEAE(__this, L_18, L_20, L_22, NULL);
-	}
-
-IL_005d:
+IL_0021:
 	{
 		// }
 		return;
@@ -9592,8 +9536,8 @@ IL_001b:
 		return;
 	}
 }
-// System.Void UnityEngine.UIElements.PanelEventHandler::SendKeyUpEvent(UnityEngine.Event,UnityEngine.KeyCode,UnityEngine.EventModifiers)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PanelEventHandler_SendKeyUpEvent_mC3F8DADF58FA97F38C3FB9D875EEA214653266B8 (PanelEventHandler_t7DF19E1B93AD4FE82833AD0801732CB7DD8CAA09* __this, Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB* ___e0, int32_t ___keyCode1, int32_t ___modifiers2, const RuntimeMethod* method) 
+// System.Void UnityEngine.UIElements.PanelEventHandler::SendKeyUpEvent(UnityEngine.Event)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PanelEventHandler_SendKeyUpEvent_mF261A0CE2897E82529220A72DBE069DE97EC601D (PanelEventHandler_t7DF19E1B93AD4FE82833AD0801732CB7DD8CAA09* __this, Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB* ___e0, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -9604,33 +9548,39 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PanelEventHandler_SendKeyUpEvent_mC3F8DA
 	}
 	KeyUpEvent_tA037C42AEA6A8E0919BA60BD796B3AD1DA506394* V_0 = NULL;
 	{
-		// using (var ev = KeyUpEvent.GetPooled('\0', keyCode, modifiers))
-		int32_t L_0 = ___keyCode1;
-		int32_t L_1 = ___modifiers2;
-		KeyUpEvent_tA037C42AEA6A8E0919BA60BD796B3AD1DA506394* L_2;
-		L_2 = KeyboardEventBase_1_GetPooled_m166C0D48F33269027DFAA03D506DE97CAB8560A6(0, L_0, L_1, KeyboardEventBase_1_GetPooled_m166C0D48F33269027DFAA03D506DE97CAB8560A6_RuntimeMethod_var);
-		V_0 = L_2;
+		// using (var ev = KeyUpEvent.GetPooled('\0', e.keyCode, e.modifiers))
+		Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB* L_0 = ___e0;
+		NullCheck(L_0);
+		int32_t L_1;
+		L_1 = Event_get_keyCode_mADBB236A741F96D86E4A536E15FFECFD4C367B64(L_0, NULL);
+		Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB* L_2 = ___e0;
+		NullCheck(L_2);
+		int32_t L_3;
+		L_3 = Event_get_modifiers_mD55E7CF06EB720434F0F174EA569B2A29792D39B(L_2, NULL);
+		KeyUpEvent_tA037C42AEA6A8E0919BA60BD796B3AD1DA506394* L_4;
+		L_4 = KeyboardEventBase_1_GetPooled_m166C0D48F33269027DFAA03D506DE97CAB8560A6(0, L_1, L_3, KeyboardEventBase_1_GetPooled_m166C0D48F33269027DFAA03D506DE97CAB8560A6_RuntimeMethod_var);
+		V_0 = L_4;
 	}
 	{
 		auto __finallyBlock = il2cpp::utils::Finally([&]
 		{
 
-FINALLY_0013:
+FINALLY_001d:
 			{// begin finally (depth: 1)
 				{
-					KeyUpEvent_tA037C42AEA6A8E0919BA60BD796B3AD1DA506394* L_3 = V_0;
-					if (!L_3)
+					KeyUpEvent_tA037C42AEA6A8E0919BA60BD796B3AD1DA506394* L_5 = V_0;
+					if (!L_5)
 					{
-						goto IL_001c;
+						goto IL_0026;
 					}
 				}
 				{
-					KeyUpEvent_tA037C42AEA6A8E0919BA60BD796B3AD1DA506394* L_4 = V_0;
-					NullCheck(L_4);
-					InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var, L_4);
+					KeyUpEvent_tA037C42AEA6A8E0919BA60BD796B3AD1DA506394* L_6 = V_0;
+					NullCheck(L_6);
+					InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var, L_6);
 				}
 
-IL_001c:
+IL_0026:
 				{
 					return;
 				}
@@ -9639,11 +9589,11 @@ IL_001c:
 		try
 		{// begin try (depth: 1)
 			// SendEvent(ev, e);
-			KeyUpEvent_tA037C42AEA6A8E0919BA60BD796B3AD1DA506394* L_5 = V_0;
-			Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB* L_6 = ___e0;
-			PanelEventHandler_SendEvent_m8A731185591EB81DC398B72D4C081970A89D421B(__this, L_5, L_6, NULL);
+			KeyUpEvent_tA037C42AEA6A8E0919BA60BD796B3AD1DA506394* L_7 = V_0;
+			Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB* L_8 = ___e0;
+			PanelEventHandler_SendEvent_m8A731185591EB81DC398B72D4C081970A89D421B(__this, L_7, L_8, NULL);
 			// }
-			goto IL_001d;
+			goto IL_0027;
 		}// end try (depth: 1)
 		catch(Il2CppExceptionWrapper& e)
 		{
@@ -9651,14 +9601,14 @@ IL_001c:
 		}
 	}
 
-IL_001d:
+IL_0027:
 	{
 		// }
 		return;
 	}
 }
-// System.Void UnityEngine.UIElements.PanelEventHandler::SendKeyDownEvent(UnityEngine.Event,UnityEngine.KeyCode,UnityEngine.EventModifiers)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PanelEventHandler_SendKeyDownEvent_mE7D9589061BA12A865F047C7CF81438780048244 (PanelEventHandler_t7DF19E1B93AD4FE82833AD0801732CB7DD8CAA09* __this, Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB* ___e0, int32_t ___keyCode1, int32_t ___modifiers2, const RuntimeMethod* method) 
+// System.Void UnityEngine.UIElements.PanelEventHandler::SendKeyDownEvent(UnityEngine.Event)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PanelEventHandler_SendKeyDownEvent_mB5DA98F3B07ED56ABF2E694744BE6EAE3ED81452 (PanelEventHandler_t7DF19E1B93AD4FE82833AD0801732CB7DD8CAA09* __this, Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB* ___e0, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
@@ -9669,33 +9619,43 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PanelEventHandler_SendKeyDownEvent_mE7D9
 	}
 	KeyDownEvent_t1971978254C8EE65CDDD992AF86B44E442CDD18C* V_0 = NULL;
 	{
-		// using (var ev = KeyDownEvent.GetPooled('\0', keyCode, modifiers))
-		int32_t L_0 = ___keyCode1;
-		int32_t L_1 = ___modifiers2;
-		KeyDownEvent_t1971978254C8EE65CDDD992AF86B44E442CDD18C* L_2;
-		L_2 = KeyboardEventBase_1_GetPooled_m2A3CDA8BEAE1A4DD06BD2B6FDF65F77F27369F45(0, L_0, L_1, KeyboardEventBase_1_GetPooled_m2A3CDA8BEAE1A4DD06BD2B6FDF65F77F27369F45_RuntimeMethod_var);
-		V_0 = L_2;
+		// using (var ev = KeyDownEvent.GetPooled(e.character, e.keyCode, e.modifiers))
+		Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB* L_0 = ___e0;
+		NullCheck(L_0);
+		Il2CppChar L_1;
+		L_1 = Event_get_character_m8F7A92E90EF65B9379C01432B42D6BF818C32A61(L_0, NULL);
+		Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB* L_2 = ___e0;
+		NullCheck(L_2);
+		int32_t L_3;
+		L_3 = Event_get_keyCode_mADBB236A741F96D86E4A536E15FFECFD4C367B64(L_2, NULL);
+		Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB* L_4 = ___e0;
+		NullCheck(L_4);
+		int32_t L_5;
+		L_5 = Event_get_modifiers_mD55E7CF06EB720434F0F174EA569B2A29792D39B(L_4, NULL);
+		KeyDownEvent_t1971978254C8EE65CDDD992AF86B44E442CDD18C* L_6;
+		L_6 = KeyboardEventBase_1_GetPooled_m2A3CDA8BEAE1A4DD06BD2B6FDF65F77F27369F45(L_1, L_3, L_5, KeyboardEventBase_1_GetPooled_m2A3CDA8BEAE1A4DD06BD2B6FDF65F77F27369F45_RuntimeMethod_var);
+		V_0 = L_6;
 	}
 	{
 		auto __finallyBlock = il2cpp::utils::Finally([&]
 		{
 
-FINALLY_0013:
+FINALLY_0022:
 			{// begin finally (depth: 1)
 				{
-					KeyDownEvent_t1971978254C8EE65CDDD992AF86B44E442CDD18C* L_3 = V_0;
-					if (!L_3)
+					KeyDownEvent_t1971978254C8EE65CDDD992AF86B44E442CDD18C* L_7 = V_0;
+					if (!L_7)
 					{
-						goto IL_001c;
+						goto IL_002b;
 					}
 				}
 				{
-					KeyDownEvent_t1971978254C8EE65CDDD992AF86B44E442CDD18C* L_4 = V_0;
-					NullCheck(L_4);
-					InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var, L_4);
+					KeyDownEvent_t1971978254C8EE65CDDD992AF86B44E442CDD18C* L_8 = V_0;
+					NullCheck(L_8);
+					InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var, L_8);
 				}
 
-IL_001c:
+IL_002b:
 				{
 					return;
 				}
@@ -9704,11 +9664,11 @@ IL_001c:
 		try
 		{// begin try (depth: 1)
 			// SendEvent(ev, e);
-			KeyDownEvent_t1971978254C8EE65CDDD992AF86B44E442CDD18C* L_5 = V_0;
-			Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB* L_6 = ___e0;
-			PanelEventHandler_SendEvent_m8A731185591EB81DC398B72D4C081970A89D421B(__this, L_5, L_6, NULL);
+			KeyDownEvent_t1971978254C8EE65CDDD992AF86B44E442CDD18C* L_9 = V_0;
+			Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB* L_10 = ___e0;
+			PanelEventHandler_SendEvent_m8A731185591EB81DC398B72D4C081970A89D421B(__this, L_9, L_10, NULL);
 			// }
-			goto IL_001d;
+			goto IL_002c;
 		}// end try (depth: 1)
 		catch(Il2CppExceptionWrapper& e)
 		{
@@ -9716,72 +9676,7 @@ IL_001c:
 		}
 	}
 
-IL_001d:
-	{
-		// }
-		return;
-	}
-}
-// System.Void UnityEngine.UIElements.PanelEventHandler::SendTextEvent(UnityEngine.Event,System.Char,UnityEngine.EventModifiers)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PanelEventHandler_SendTextEvent_m7F5BBE8DEC07BA49E1BB117B4B52ED330B38AEAE (PanelEventHandler_t7DF19E1B93AD4FE82833AD0801732CB7DD8CAA09* __this, Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB* ___e0, Il2CppChar ___c1, int32_t ___modifiers2, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&KeyboardEventBase_1_GetPooled_m2A3CDA8BEAE1A4DD06BD2B6FDF65F77F27369F45_RuntimeMethod_var);
-		s_Il2CppMethodInitialized = true;
-	}
-	KeyDownEvent_t1971978254C8EE65CDDD992AF86B44E442CDD18C* V_0 = NULL;
-	{
-		// using (var ev = KeyDownEvent.GetPooled(c, KeyCode.None, modifiers))
-		Il2CppChar L_0 = ___c1;
-		int32_t L_1 = ___modifiers2;
-		KeyDownEvent_t1971978254C8EE65CDDD992AF86B44E442CDD18C* L_2;
-		L_2 = KeyboardEventBase_1_GetPooled_m2A3CDA8BEAE1A4DD06BD2B6FDF65F77F27369F45(L_0, 0, L_1, KeyboardEventBase_1_GetPooled_m2A3CDA8BEAE1A4DD06BD2B6FDF65F77F27369F45_RuntimeMethod_var);
-		V_0 = L_2;
-	}
-	{
-		auto __finallyBlock = il2cpp::utils::Finally([&]
-		{
-
-FINALLY_0013:
-			{// begin finally (depth: 1)
-				{
-					KeyDownEvent_t1971978254C8EE65CDDD992AF86B44E442CDD18C* L_3 = V_0;
-					if (!L_3)
-					{
-						goto IL_001c;
-					}
-				}
-				{
-					KeyDownEvent_t1971978254C8EE65CDDD992AF86B44E442CDD18C* L_4 = V_0;
-					NullCheck(L_4);
-					InterfaceActionInvoker0::Invoke(0 /* System.Void System.IDisposable::Dispose() */, IDisposable_t030E0496B4E0E4E4F086825007979AF51F7248C5_il2cpp_TypeInfo_var, L_4);
-				}
-
-IL_001c:
-				{
-					return;
-				}
-			}// end finally (depth: 1)
-		});
-		try
-		{// begin try (depth: 1)
-			// SendEvent(ev, e);
-			KeyDownEvent_t1971978254C8EE65CDDD992AF86B44E442CDD18C* L_5 = V_0;
-			Event_tEBC6F24B56CE22B9C9AD1AC6C24A6B83BC3860CB* L_6 = ___e0;
-			PanelEventHandler_SendEvent_m8A731185591EB81DC398B72D4C081970A89D421B(__this, L_5, L_6, NULL);
-			// }
-			goto IL_001d;
-		}// end try (depth: 1)
-		catch(Il2CppExceptionWrapper& e)
-		{
-			__finallyBlock.StoreException(e.ex);
-		}
-	}
-
-IL_001d:
+IL_002c:
 	{
 		// }
 		return;
