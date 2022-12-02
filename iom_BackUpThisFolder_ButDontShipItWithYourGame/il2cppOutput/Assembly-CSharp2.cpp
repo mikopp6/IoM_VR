@@ -4169,40 +4169,44 @@ struct ButtonTriggerZone_t804E2DD4406B082D050C64D7403494F07F068721  : public Mon
 // CarController
 struct CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
+	// UnityEngine.Vector3 CarController::originalPosition
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___originalPosition_4;
+	// UnityEngine.Quaternion CarController::originalRotation
+	Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___originalRotation_5;
 	// System.Single CarController::horizontalInput
-	float ___horizontalInput_6;
+	float ___horizontalInput_8;
 	// System.Single CarController::verticalInput
-	float ___verticalInput_7;
+	float ___verticalInput_9;
 	// System.Single CarController::steerAngle
-	float ___steerAngle_8;
+	float ___steerAngle_10;
 	// System.Single CarController::currentBrakeForce
-	float ___currentBrakeForce_9;
+	float ___currentBrakeForce_11;
 	// System.Boolean CarController::isBraking
-	bool ___isBraking_10;
+	bool ___isBraking_12;
 	// System.Single CarController::currentAcceleration
-	float ___currentAcceleration_11;
+	float ___currentAcceleration_13;
 	// System.Single CarController::motorForce
-	float ___motorForce_12;
+	float ___motorForce_14;
 	// System.Single CarController::brakeForce
-	float ___brakeForce_13;
+	float ___brakeForce_15;
 	// System.Single CarController::maxSteerAngle
-	float ___maxSteerAngle_14;
+	float ___maxSteerAngle_16;
 	// UnityEngine.WheelCollider CarController::FrontLeftCollider
-	WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* ___FrontLeftCollider_15;
+	WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* ___FrontLeftCollider_17;
 	// UnityEngine.WheelCollider CarController::FrontRightCollider
-	WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* ___FrontRightCollider_16;
+	WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* ___FrontRightCollider_18;
 	// UnityEngine.WheelCollider CarController::BackLeftCollider
-	WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* ___BackLeftCollider_17;
+	WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* ___BackLeftCollider_19;
 	// UnityEngine.WheelCollider CarController::BackRightCollider
-	WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* ___BackRightCollider_18;
+	WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* ___BackRightCollider_20;
 	// UnityEngine.Transform CarController::FrontLeftTransform
-	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___FrontLeftTransform_19;
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___FrontLeftTransform_21;
 	// UnityEngine.Transform CarController::FrontRightTransform
-	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___FrontRightTransform_20;
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___FrontRightTransform_22;
 	// UnityEngine.Transform CarController::BackLeftTransform
-	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___BackLeftTransform_21;
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___BackLeftTransform_23;
 	// UnityEngine.Transform CarController::BackRightTransform
-	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___BackRightTransform_22;
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___BackRightTransform_24;
 };
 
 // DebugUIBuilder
@@ -18506,6 +18510,26 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlayerMovement__ctor_mB37559C5B063816187
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CarController_Start_m15C0896D5EB70572BF27815FE41FF8E52DA22145 (CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5* __this, const RuntimeMethod* method) 
 {
 	{
+		// originalPosition = gameObject.transform.position;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0;
+		L_0 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
+		NullCheck(L_0);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_1;
+		L_1 = GameObject_get_transform_m0BC10ADFA1632166AE5544BDF9038A2650C2AE56(L_0, NULL);
+		NullCheck(L_1);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_2;
+		L_2 = Transform_get_position_m69CD5FA214FDAE7BB701552943674846C220FDE1(L_1, NULL);
+		__this->___originalPosition_4 = L_2;
+		// originalRotation = gameObject.transform.rotation;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_3;
+		L_3 = Component_get_gameObject_m57AEFBB14DB39EC476F740BA000E170355DE691B(__this, NULL);
+		NullCheck(L_3);
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_4;
+		L_4 = GameObject_get_transform_m0BC10ADFA1632166AE5544BDF9038A2650C2AE56(L_3, NULL);
+		NullCheck(L_4);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_5;
+		L_5 = Transform_get_rotation_m32AF40CA0D50C797DA639A696F8EAEC7524C179C(L_4, NULL);
+		__this->___originalRotation_5 = L_5;
 		// }
 		return;
 	}
@@ -18545,19 +18569,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CarController_GetInput_m71C26CF5B5BF4BB8
 	}
 	bool V_0 = false;
 	bool V_1 = false;
+	bool V_2 = false;
 	{
 		// OVRInput.FixedUpdate();
 		il2cpp_codegen_runtime_class_init_inline(OVRInput_t759D9CC8F14D8539AD78A0375A2306C39D77100A_il2cpp_TypeInfo_var);
 		OVRInput_FixedUpdate_m0B2BA5C8485902E1A0EE19A1F7066E671D8ECCB5(NULL);
 		// currentAcceleration = motorForce * OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger);
-		float L_0 = __this->___motorForce_12;
+		float L_0 = __this->___motorForce_14;
 		float L_1;
 		L_1 = OVRInput_Get_m1FD85568F358C43019E09E48A7BEBD6CD7F7E5D8(2, ((int32_t)-2147483648LL), NULL);
-		__this->___currentAcceleration_11 = ((float)il2cpp_codegen_multiply(L_0, L_1));
+		__this->___currentAcceleration_13 = ((float)il2cpp_codegen_multiply(L_0, L_1));
 		// isBraking = OVRInput.Get(OVRInput.RawButton.LIndexTrigger);
 		bool L_2;
 		L_2 = OVRInput_Get_m537C5F53DCBD027936460E4183648F5EEBA6A654(((int32_t)268435456), ((int32_t)-2147483648LL), NULL);
-		__this->___isBraking_10 = L_2;
+		__this->___isBraking_12 = L_2;
 		// if (OVRInput.Get(OVRInput.Button.PrimaryHandTrigger))
 		bool L_3;
 		L_3 = OVRInput_Get_m8CF227684F49E1C26239D78F826E11A956E909C1(((int32_t)16384), ((int32_t)-2147483648LL), NULL);
@@ -18573,7 +18598,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CarController_GetInput_m71C26CF5B5BF4BB8
 		il2cpp_codegen_runtime_class_init_inline(OVRInput_t759D9CC8F14D8539AD78A0375A2306C39D77100A_il2cpp_TypeInfo_var);
 		float L_5;
 		L_5 = OVRInput_Get_m1FD85568F358C43019E09E48A7BEBD6CD7F7E5D8(4, ((int32_t)-2147483648LL), NULL);
-		__this->___horizontalInput_6 = ((float)il2cpp_codegen_multiply(L_5, (-1.0f)));
+		__this->___horizontalInput_8 = ((float)il2cpp_codegen_multiply(L_5, (-1.0f)));
 		goto IL_0091;
 	}
 
@@ -18595,17 +18620,45 @@ IL_0060:
 		il2cpp_codegen_runtime_class_init_inline(OVRInput_t759D9CC8F14D8539AD78A0375A2306C39D77100A_il2cpp_TypeInfo_var);
 		float L_8;
 		L_8 = OVRInput_Get_m1FD85568F358C43019E09E48A7BEBD6CD7F7E5D8(8, ((int32_t)-2147483648LL), NULL);
-		__this->___horizontalInput_6 = L_8;
+		__this->___horizontalInput_8 = L_8;
 		goto IL_0091;
 	}
 
 IL_0086:
 	{
 		// horizontalInput = 0f;
-		__this->___horizontalInput_6 = (0.0f);
+		__this->___horizontalInput_8 = (0.0f);
 	}
 
 IL_0091:
+	{
+		// if (OVRInput.Get(OVRInput.Button.One))
+		il2cpp_codegen_runtime_class_init_inline(OVRInput_t759D9CC8F14D8539AD78A0375A2306C39D77100A_il2cpp_TypeInfo_var);
+		bool L_9;
+		L_9 = OVRInput_Get_m8CF227684F49E1C26239D78F826E11A956E909C1(1, ((int32_t)-2147483648LL), NULL);
+		V_2 = L_9;
+		bool L_10 = V_2;
+		if (!L_10)
+		{
+			goto IL_00c6;
+		}
+	}
+	{
+		// transform.position = originalPosition;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_11;
+		L_11 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 L_12 = __this->___originalPosition_4;
+		NullCheck(L_11);
+		Transform_set_position_mA1A817124BB41B685043DED2A9BA48CDF37C4156(L_11, L_12, NULL);
+		// transform.rotation = originalRotation;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_13;
+		L_13 = Component_get_transform_m2919A1D81931E6932C7F06D4C2F0AB8DDA9A5371(__this, NULL);
+		Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 L_14 = __this->___originalRotation_5;
+		NullCheck(L_13);
+		Transform_set_rotation_m61340DE74726CF0F9946743A727C4D444397331D(L_13, L_14, NULL);
+	}
+
+IL_00c6:
 	{
 		// }
 		return;
@@ -18620,17 +18673,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CarController_HandleMotor_m01B72F64CF758
 	CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5* G_B3_1 = NULL;
 	{
 		// FrontLeftCollider.motorTorque = currentAcceleration;
-		WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* L_0 = __this->___FrontLeftCollider_15;
-		float L_1 = __this->___currentAcceleration_11;
+		WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* L_0 = __this->___FrontLeftCollider_17;
+		float L_1 = __this->___currentAcceleration_13;
 		NullCheck(L_0);
 		WheelCollider_set_motorTorque_m4958AAF7D867CF7570420F9BAFAF04DC904F02A8(L_0, L_1, NULL);
 		// FrontRightCollider.motorTorque = currentAcceleration;
-		WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* L_2 = __this->___FrontRightCollider_16;
-		float L_3 = __this->___currentAcceleration_11;
+		WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* L_2 = __this->___FrontRightCollider_18;
+		float L_3 = __this->___currentAcceleration_13;
 		NullCheck(L_2);
 		WheelCollider_set_motorTorque_m4958AAF7D867CF7570420F9BAFAF04DC904F02A8(L_2, L_3, NULL);
 		// currentBrakeForce = isBraking ? brakeForce : 0f;
-		bool L_4 = __this->___isBraking_10;
+		bool L_4 = __this->___isBraking_12;
 		G_B1_0 = __this;
 		if (L_4)
 		{
@@ -18646,7 +18699,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CarController_HandleMotor_m01B72F64CF758
 
 IL_0035:
 	{
-		float L_5 = __this->___brakeForce_13;
+		float L_5 = __this->___brakeForce_15;
 		G_B3_0 = L_5;
 		G_B3_1 = G_B2_0;
 	}
@@ -18654,7 +18707,7 @@ IL_0035:
 IL_003b:
 	{
 		NullCheck(G_B3_1);
-		G_B3_1->___currentBrakeForce_9 = G_B3_0;
+		G_B3_1->___currentBrakeForce_11 = G_B3_0;
 		// ApplyBraking();
 		CarController_ApplyBraking_m6083345AEC4D25B59AA73B80B42DD94CD15046D0(__this, NULL);
 		// }
@@ -18666,23 +18719,23 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CarController_ApplyBraking_m6083345AEC4D
 {
 	{
 		// FrontLeftCollider.brakeTorque = currentBrakeForce;
-		WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* L_0 = __this->___FrontLeftCollider_15;
-		float L_1 = __this->___currentBrakeForce_9;
+		WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* L_0 = __this->___FrontLeftCollider_17;
+		float L_1 = __this->___currentBrakeForce_11;
 		NullCheck(L_0);
 		WheelCollider_set_brakeTorque_mB9B216C57C275470907C7DB35185E2F192DC8DAB(L_0, L_1, NULL);
 		// FrontRightCollider.brakeTorque = currentBrakeForce;
-		WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* L_2 = __this->___FrontRightCollider_16;
-		float L_3 = __this->___currentBrakeForce_9;
+		WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* L_2 = __this->___FrontRightCollider_18;
+		float L_3 = __this->___currentBrakeForce_11;
 		NullCheck(L_2);
 		WheelCollider_set_brakeTorque_mB9B216C57C275470907C7DB35185E2F192DC8DAB(L_2, L_3, NULL);
 		// BackLeftCollider.brakeTorque = currentBrakeForce;
-		WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* L_4 = __this->___BackLeftCollider_17;
-		float L_5 = __this->___currentBrakeForce_9;
+		WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* L_4 = __this->___BackLeftCollider_19;
+		float L_5 = __this->___currentBrakeForce_11;
 		NullCheck(L_4);
 		WheelCollider_set_brakeTorque_mB9B216C57C275470907C7DB35185E2F192DC8DAB(L_4, L_5, NULL);
 		// BackRightCollider.brakeTorque = currentBrakeForce;
-		WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* L_6 = __this->___BackRightCollider_18;
-		float L_7 = __this->___currentBrakeForce_9;
+		WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* L_6 = __this->___BackRightCollider_20;
+		float L_7 = __this->___currentBrakeForce_11;
 		NullCheck(L_6);
 		WheelCollider_set_brakeTorque_mB9B216C57C275470907C7DB35185E2F192DC8DAB(L_6, L_7, NULL);
 		// }
@@ -18694,17 +18747,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CarController_HandleSteering_m65CD0A7701
 {
 	{
 		// steerAngle = maxSteerAngle * horizontalInput;
-		float L_0 = __this->___maxSteerAngle_14;
-		float L_1 = __this->___horizontalInput_6;
-		__this->___steerAngle_8 = ((float)il2cpp_codegen_multiply(L_0, L_1));
+		float L_0 = __this->___maxSteerAngle_16;
+		float L_1 = __this->___horizontalInput_8;
+		__this->___steerAngle_10 = ((float)il2cpp_codegen_multiply(L_0, L_1));
 		// FrontLeftCollider.steerAngle = steerAngle;
-		WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* L_2 = __this->___FrontLeftCollider_15;
-		float L_3 = __this->___steerAngle_8;
+		WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* L_2 = __this->___FrontLeftCollider_17;
+		float L_3 = __this->___steerAngle_10;
 		NullCheck(L_2);
 		WheelCollider_set_steerAngle_m7BF83B27D8956355F873537939BE9F35CF3113C3(L_2, L_3, NULL);
 		// FrontRightCollider.steerAngle = steerAngle;
-		WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* L_4 = __this->___FrontRightCollider_16;
-		float L_5 = __this->___steerAngle_8;
+		WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* L_4 = __this->___FrontRightCollider_18;
+		float L_5 = __this->___steerAngle_10;
 		NullCheck(L_4);
 		WheelCollider_set_steerAngle_m7BF83B27D8956355F873537939BE9F35CF3113C3(L_4, L_5, NULL);
 		// }
@@ -18716,20 +18769,20 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CarController_UpdateWheels_mF43036783DA7
 {
 	{
 		// UpdateSingleWheel(FrontLeftCollider, FrontLeftTransform);
-		WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* L_0 = __this->___FrontLeftCollider_15;
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_1 = __this->___FrontLeftTransform_19;
+		WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* L_0 = __this->___FrontLeftCollider_17;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_1 = __this->___FrontLeftTransform_21;
 		CarController_UpdateSingleWheel_m42207D1D0E760742D9E989B811B082A15509A730(__this, L_0, L_1, NULL);
 		// UpdateSingleWheel(FrontRightCollider, FrontRightTransform);
-		WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* L_2 = __this->___FrontRightCollider_16;
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_3 = __this->___FrontRightTransform_20;
+		WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* L_2 = __this->___FrontRightCollider_18;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_3 = __this->___FrontRightTransform_22;
 		CarController_UpdateSingleWheel_m42207D1D0E760742D9E989B811B082A15509A730(__this, L_2, L_3, NULL);
 		// UpdateSingleWheel(BackLeftCollider, BackLeftTransform);
-		WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* L_4 = __this->___BackLeftCollider_17;
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_5 = __this->___BackLeftTransform_21;
+		WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* L_4 = __this->___BackLeftCollider_19;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_5 = __this->___BackLeftTransform_23;
 		CarController_UpdateSingleWheel_m42207D1D0E760742D9E989B811B082A15509A730(__this, L_4, L_5, NULL);
 		// UpdateSingleWheel(BackRightCollider, BackRightTransform);
-		WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* L_6 = __this->___BackRightCollider_18;
-		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_7 = __this->___BackRightTransform_22;
+		WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* L_6 = __this->___BackRightCollider_20;
+		Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* L_7 = __this->___BackRightTransform_24;
 		CarController_UpdateSingleWheel_m42207D1D0E760742D9E989B811B082A15509A730(__this, L_6, L_7, NULL);
 		// }
 		return;
@@ -18766,7 +18819,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CarController__ctor_mED29536AC2B7697D76B
 {
 	{
 		// private float currentAcceleration = 0f;
-		__this->___currentAcceleration_11 = (0.0f);
+		__this->___currentAcceleration_13 = (0.0f);
 		MonoBehaviour__ctor_m592DB0105CA0BC97AA1C5F4AD27B12D68A3B7C1E(__this, NULL);
 		return;
 	}

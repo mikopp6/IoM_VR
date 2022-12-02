@@ -25571,40 +25571,44 @@ struct Camera2DController_t0400CA814E75D2116328B3415818F0C13EE742A3  : public Mo
 // CarController
 struct CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
+	// UnityEngine.Vector3 CarController::originalPosition
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___originalPosition_4;
+	// UnityEngine.Quaternion CarController::originalRotation
+	Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___originalRotation_5;
 	// System.Single CarController::horizontalInput
-	float ___horizontalInput_6;
+	float ___horizontalInput_8;
 	// System.Single CarController::verticalInput
-	float ___verticalInput_7;
+	float ___verticalInput_9;
 	// System.Single CarController::steerAngle
-	float ___steerAngle_8;
+	float ___steerAngle_10;
 	// System.Single CarController::currentBrakeForce
-	float ___currentBrakeForce_9;
+	float ___currentBrakeForce_11;
 	// System.Boolean CarController::isBraking
-	bool ___isBraking_10;
+	bool ___isBraking_12;
 	// System.Single CarController::currentAcceleration
-	float ___currentAcceleration_11;
+	float ___currentAcceleration_13;
 	// System.Single CarController::motorForce
-	float ___motorForce_12;
+	float ___motorForce_14;
 	// System.Single CarController::brakeForce
-	float ___brakeForce_13;
+	float ___brakeForce_15;
 	// System.Single CarController::maxSteerAngle
-	float ___maxSteerAngle_14;
+	float ___maxSteerAngle_16;
 	// UnityEngine.WheelCollider CarController::FrontLeftCollider
-	WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* ___FrontLeftCollider_15;
+	WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* ___FrontLeftCollider_17;
 	// UnityEngine.WheelCollider CarController::FrontRightCollider
-	WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* ___FrontRightCollider_16;
+	WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* ___FrontRightCollider_18;
 	// UnityEngine.WheelCollider CarController::BackLeftCollider
-	WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* ___BackLeftCollider_17;
+	WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* ___BackLeftCollider_19;
 	// UnityEngine.WheelCollider CarController::BackRightCollider
-	WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* ___BackRightCollider_18;
+	WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* ___BackRightCollider_20;
 	// UnityEngine.Transform CarController::FrontLeftTransform
-	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___FrontLeftTransform_19;
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___FrontLeftTransform_21;
 	// UnityEngine.Transform CarController::FrontRightTransform
-	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___FrontRightTransform_20;
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___FrontRightTransform_22;
 	// UnityEngine.Transform CarController::BackLeftTransform
-	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___BackLeftTransform_21;
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___BackLeftTransform_23;
 	// UnityEngine.Transform CarController::BackRightTransform
-	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___BackRightTransform_22;
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___BackRightTransform_24;
 };
 
 // Oculus.Interaction.Samples.CarouselView

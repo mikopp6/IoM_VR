@@ -6,6 +6,9 @@ public class CarController : MonoBehaviour
 {
     // https://youtu.be/Z4HA8zJhGEk
 
+    Vector3 originalPosition;
+    Quaternion originalRotation;
+
     private const string HORIZONTAL = "Horizontal";
     private const string VERTICAL = "Vertical";
 
@@ -33,7 +36,8 @@ public class CarController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        originalPosition = gameObject.transform.position;
+        originalRotation = gameObject.transform.rotation;
     }
 
     // Update is called once per frame
@@ -62,6 +66,12 @@ public class CarController : MonoBehaviour
             horizontalInput = OVRInput.Get(OVRInput.Axis1D.SecondaryHandTrigger);
         else
             horizontalInput = 0f;
+
+        if (OVRInput.Get(OVRInput.Button.One))
+        { 
+            transform.position = originalPosition;
+            transform.rotation = originalRotation;
+        }
     }
 
     private void HandleMotor()

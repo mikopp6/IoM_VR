@@ -17052,40 +17052,44 @@ struct ButtonTriggerZone_t804E2DD4406B082D050C64D7403494F07F068721  : public Mon
 // CarController
 struct CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
+	// UnityEngine.Vector3 CarController::originalPosition
+	Vector3_t24C512C7B96BBABAD472002D0BA2BDA40A5A80B2 ___originalPosition_4;
+	// UnityEngine.Quaternion CarController::originalRotation
+	Quaternion_tDA59F214EF07D7700B26E40E562F267AF7306974 ___originalRotation_5;
 	// System.Single CarController::horizontalInput
-	float ___horizontalInput_6;
+	float ___horizontalInput_8;
 	// System.Single CarController::verticalInput
-	float ___verticalInput_7;
+	float ___verticalInput_9;
 	// System.Single CarController::steerAngle
-	float ___steerAngle_8;
+	float ___steerAngle_10;
 	// System.Single CarController::currentBrakeForce
-	float ___currentBrakeForce_9;
+	float ___currentBrakeForce_11;
 	// System.Boolean CarController::isBraking
-	bool ___isBraking_10;
+	bool ___isBraking_12;
 	// System.Single CarController::currentAcceleration
-	float ___currentAcceleration_11;
+	float ___currentAcceleration_13;
 	// System.Single CarController::motorForce
-	float ___motorForce_12;
+	float ___motorForce_14;
 	// System.Single CarController::brakeForce
-	float ___brakeForce_13;
+	float ___brakeForce_15;
 	// System.Single CarController::maxSteerAngle
-	float ___maxSteerAngle_14;
+	float ___maxSteerAngle_16;
 	// UnityEngine.WheelCollider CarController::FrontLeftCollider
-	WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* ___FrontLeftCollider_15;
+	WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* ___FrontLeftCollider_17;
 	// UnityEngine.WheelCollider CarController::FrontRightCollider
-	WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* ___FrontRightCollider_16;
+	WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* ___FrontRightCollider_18;
 	// UnityEngine.WheelCollider CarController::BackLeftCollider
-	WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* ___BackLeftCollider_17;
+	WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* ___BackLeftCollider_19;
 	// UnityEngine.WheelCollider CarController::BackRightCollider
-	WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* ___BackRightCollider_18;
+	WheelCollider_t4E35407C7AFEFA3DB30E9FFE3C38C9A5C5933481* ___BackRightCollider_20;
 	// UnityEngine.Transform CarController::FrontLeftTransform
-	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___FrontLeftTransform_19;
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___FrontLeftTransform_21;
 	// UnityEngine.Transform CarController::FrontRightTransform
-	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___FrontRightTransform_20;
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___FrontRightTransform_22;
 	// UnityEngine.Transform CarController::BackLeftTransform
-	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___BackLeftTransform_21;
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___BackLeftTransform_23;
 	// UnityEngine.Transform CarController::BackRightTransform
-	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___BackRightTransform_22;
+	Transform_tB27202C6F4E36D225EE28A13E4D662BF99785DB1* ___BackRightTransform_24;
 };
 
 // Oculus.Interaction.Samples.CarouselView
@@ -23314,9 +23318,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6604[3] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6605[9] = 
 {
 	static_cast<int32_t>(offsetof(PlayerMovement_t4A0A0A8C937BC1D4FC570D1B5B50847338423351, ___controller_4)),static_cast<int32_t>(offsetof(PlayerMovement_t4A0A0A8C937BC1D4FC570D1B5B50847338423351, ___speed_5)),static_cast<int32_t>(offsetof(PlayerMovement_t4A0A0A8C937BC1D4FC570D1B5B50847338423351, ___gravity_6)),static_cast<int32_t>(offsetof(PlayerMovement_t4A0A0A8C937BC1D4FC570D1B5B50847338423351, ___jumpHeight_7)),static_cast<int32_t>(offsetof(PlayerMovement_t4A0A0A8C937BC1D4FC570D1B5B50847338423351, ___groundCheck_8)),static_cast<int32_t>(offsetof(PlayerMovement_t4A0A0A8C937BC1D4FC570D1B5B50847338423351, ___groundDistance_9)),static_cast<int32_t>(offsetof(PlayerMovement_t4A0A0A8C937BC1D4FC570D1B5B50847338423351, ___groundMask_10)),static_cast<int32_t>(offsetof(PlayerMovement_t4A0A0A8C937BC1D4FC570D1B5B50847338423351, ___velocity_11)),static_cast<int32_t>(offsetof(PlayerMovement_t4A0A0A8C937BC1D4FC570D1B5B50847338423351, ___isGrounded_12)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6606[19] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6606[21] = 
 {
-	0,0,static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___horizontalInput_6)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___verticalInput_7)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___steerAngle_8)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___currentBrakeForce_9)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___isBraking_10)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___currentAcceleration_11)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___motorForce_12)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___brakeForce_13)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___maxSteerAngle_14)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___FrontLeftCollider_15)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___FrontRightCollider_16)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___BackLeftCollider_17)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___BackRightCollider_18)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___FrontLeftTransform_19)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___FrontRightTransform_20)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___BackLeftTransform_21)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___BackRightTransform_22)),};
+	static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___originalPosition_4)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___originalRotation_5)),0,0,static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___horizontalInput_8)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___verticalInput_9)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___steerAngle_10)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___currentBrakeForce_11)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___isBraking_12)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___currentAcceleration_13)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___motorForce_14)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___brakeForce_15)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___maxSteerAngle_16)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___FrontLeftCollider_17)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___FrontRightCollider_18)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___BackLeftCollider_19)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___BackRightCollider_20)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___FrontLeftTransform_21)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___FrontRightTransform_22)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___BackLeftTransform_23)),static_cast<int32_t>(offsetof(CarController_t040DDF82A09770A77B8C41CDB423E13FE6F68CD5, ___BackRightTransform_24)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable6607[11] = 
 {
 	static_cast<int32_t>(offsetof(WheelController_t46CA6F63776474A025E3D45B31008643B7BCC03C, ___FrontCollider_4)),static_cast<int32_t>(offsetof(WheelController_t46CA6F63776474A025E3D45B31008643B7BCC03C, ___RearCollider_5)),static_cast<int32_t>(offsetof(WheelController_t46CA6F63776474A025E3D45B31008643B7BCC03C, ___FrontTransform_6)),static_cast<int32_t>(offsetof(WheelController_t46CA6F63776474A025E3D45B31008643B7BCC03C, ___RearTransform_7)),static_cast<int32_t>(offsetof(WheelController_t46CA6F63776474A025E3D45B31008643B7BCC03C, ___acceleration_8)),static_cast<int32_t>(offsetof(WheelController_t46CA6F63776474A025E3D45B31008643B7BCC03C, ___brakingForce_9)),static_cast<int32_t>(offsetof(WheelController_t46CA6F63776474A025E3D45B31008643B7BCC03C, ___maxTurnAngle_10)),static_cast<int32_t>(offsetof(WheelController_t46CA6F63776474A025E3D45B31008643B7BCC03C, ___currentAcceleration_11)),static_cast<int32_t>(offsetof(WheelController_t46CA6F63776474A025E3D45B31008643B7BCC03C, ___currentBrakeForce_12)),static_cast<int32_t>(offsetof(WheelController_t46CA6F63776474A025E3D45B31008643B7BCC03C, ___currentTurnAngle_13)),static_cast<int32_t>(offsetof(WheelController_t46CA6F63776474A025E3D45B31008643B7BCC03C, ___turn_14)),};
