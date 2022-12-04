@@ -32,6 +32,9 @@ public class VRDebug : MonoBehaviour
             Debug.Log("Right trigger pressed");
         if (OVRInput.GetDown(OVRInput.Button.PrimaryIndexTrigger))
             Debug.Log("Left trigger pressed");
-
+        if (OVRInput.GetUp(OVRInput.Touch.PrimaryThumbstick))
+            Debug.Log("Left thumbstick moved up");
+        if (OVRInput.GetUp(OVRInput.Touch.SecondaryThumbstick))
+            Debug.Log("Right thumbstick moved up");
     }
 }
