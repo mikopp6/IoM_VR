@@ -12,7 +12,7 @@ public class ConsoleToText : MonoBehaviour
     private void OnEnable()
     {
         Application.logMessageReceived += HandleLog;
-        Debug.Log("Log enabled!");
+        // Debug.Log("Log enabled!");
     }
 
     private void OnDisable()
