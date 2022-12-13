@@ -4,10 +4,17 @@ using UnityEngine;
 
 public class CarController : MonoBehaviour
 {
-    // https://youtu.be/Z4HA8zJhGEk
+    // Inspiration taken from tutorial: https://youtu.be/Z4HA8zJhGEk
 
-    Vector3 originalPosition;
-    Quaternion originalRotation;
+    
+
+    Vector3 originalCarPosition;
+    Quaternion originalCarRotation;
+    Vector3 originalCameraPosition;
+    Quaternion originalCameraRotation;
+    Vector3 originalTrackingSpacePosition;
+    Quaternion originalTrackingSpaceRotation;
+
 
     private const string HORIZONTAL = "Horizontal";
     private const string VERTICAL = "Vertical";
@@ -18,6 +25,12 @@ public class CarController : MonoBehaviour
     private float currentBrakeForce;
     private bool isBraking;
     private float currentAcceleration = 0f;
+
+    private bool hasCrashed;
+    private bool crashCameraEnabled;
+
+    [SerializeField] public Transform OVRPlayerController;
+    [SerializeField] public Transform TrackingSpace;
 
     [SerializeField] private float motorForce;
     [SerializeField] private float brakeForce;
@@ -36,14 +49,26 @@ public class CarController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        originalPosition = gameObject.transform.position;
-        originalRotation = gameObject.transform.rotation;
+        originalCarPosition = gameObject.transform.position;
+        originalCarRotation = gameObject.transform.rotation;
+        originalCameraPosition = OVRPlayerController.transform.position;
+        originalCameraRotation = OVRPlayerController.transform.rotation;
+        ExecuteAfterTime(5);
+        hasCrashed = false;
+        crashCameraEnabled = false;
+    }
+
+    IEnumerator ExecuteAfterTime(float time)
+    {
+        yield return new WaitForSeconds(time);
+        originalTrackingSpacePosition = TrackingSpace.transform.position;
+        originalTrackingSpaceRotation = TrackingSpace.transform.rotation;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void FixedUpdate()
@@ -52,10 +77,14 @@ public class CarController : MonoBehaviour
         HandleMotor();
         HandleSteering();
         UpdateWheels();
+        CheckCrash();
     }
     private void GetInput()
     {
         OVRInput.FixedUpdate();
+        
+        
+
         currentAcceleration = motorForce * OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger);
 
         isBraking = OVRInput.Get(OVRInput.RawButton.LIndexTrigger);
@@ -68,16 +97,31 @@ public class CarController : MonoBehaviour
             horizontalInput = 0f;
 
         if (OVRInput.Get(OVRInput.Button.One))
-        { 
-            transform.position = originalPosition;
-            transform.rotation = originalRotation;
+        {
+            OVRPlayerController.parent = gameObject.transform;
+
+            OVRPlayerController.transform.position = originalCameraPosition;
+            OVRPlayerController.transform.rotation = originalCameraRotation;
+
+            TrackingSpace.transform.localPosition = originalTrackingSpacePosition;
+            TrackingSpace.transform.localRotation = originalTrackingSpaceRotation;
+
+            transform.position = originalCarPosition;
+            transform.rotation = originalCarRotation;
+
+            hasCrashed = false;
+        }
+
+        if (OVRInput.Get(OVRInput.Button.Three))
+        {
+            crashCameraEnabled = !crashCameraEnabled;
         }
     }
 
     private void HandleMotor()
     {
-        FrontLeftCollider.motorTorque = currentAcceleration * 200;
-        FrontRightCollider.motorTorque = currentAcceleration * 200;
+        FrontLeftCollider.motorTorque = currentAcceleration;
+        FrontRightCollider.motorTorque = currentAcceleration;
         currentBrakeForce = isBraking ? brakeForce : 0f;
         ApplyBraking();
     }
@@ -114,6 +158,34 @@ public class CarController : MonoBehaviour
 
         transform.position = position;
         transform.rotation = rotation;
+    }
+
+    void CheckCrash()
+    {
+        if (!hasCrashed)
+        {
+            if (gameObject.transform.rotation.eulerAngles.x > 50 && gameObject.transform.rotation.eulerAngles.x < 310 && crashCameraEnabled)
+            {
+                Debug.Log("X crash");
+                hasCrashed = true;
+                OVRPlayerController.parent = null;
+                Quaternion newRotation = originalCarRotation;
+                newRotation.x = 0;
+
+                TrackingSpace.transform.localRotation = newRotation;
+            }
+            if (gameObject.transform.rotation.eulerAngles.z > 50 && gameObject.transform.rotation.eulerAngles.z < 310 && crashCameraEnabled)
+            {
+                Debug.Log("Z crash");
+                hasCrashed = true;
+                OVRPlayerController.parent = null;
+                Quaternion newRotation = originalCarRotation;
+                newRotation.z = 0;
+
+                TrackingSpace.transform.localRotation = newRotation;
+            }
+        }
+        
     }
 
 }

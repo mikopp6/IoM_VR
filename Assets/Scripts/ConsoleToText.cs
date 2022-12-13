@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class ConsoleToText : MonoBehaviour
 {
-    // https://www.youtube.com/watch?v=h0OGk4fwVDg
+    // Inspiration taken from tutorial: https://www.youtube.com/watch?v=h0OGk4fwVDg
 
     public Text debugText;
     string output = "";

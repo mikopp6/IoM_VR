@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class VRDebug : MonoBehaviour
 {
-    // https://www.youtube.com/watch?v=h0OGk4fwVDg
+    // Inspiration taken from tutorial: https://www.youtube.com/watch?v=h0OGk4fwVDg
 
     public GameObject UI;
     public GameObject UIAnchor;
@@ -27,6 +27,7 @@ public class VRDebug : MonoBehaviour
             {
                 Debug.Log("Have fun!");
                 Debug.Log("Press Y to close this window");
+                Debug.Log("Press X to enable/disable crash camera");
                 Debug.Log("Press A to reset car position");
                 Debug.Log("Use the Grip buttons to steer");
                 Debug.Log("Right trigger to brake");

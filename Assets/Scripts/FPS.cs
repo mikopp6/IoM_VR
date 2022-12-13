@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class FPS : MonoBehaviour
 {
-    // https://www.youtube.com/watch?v=h0OGk4fwVDg
+    // Inspiration taken from tutorial: https://www.youtube.com/watch?v=h0OGk4fwVDg
 
     Text fpsText;
     public int refreshRate = 10;
